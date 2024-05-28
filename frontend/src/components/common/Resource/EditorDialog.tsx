@@ -259,6 +259,8 @@ export default function EditorDialog(props: EditorDialogProps) {
     setCode(originalCodeRef.current);
   }
 
+  // async function applyFunc(newItems)
+
   function handleSave() {
     // Verify the YAML even means anything before trying to use it.
     const { obj, format, error } = getObjectsFromCode(code);
@@ -311,9 +313,7 @@ export default function EditorDialog(props: EditorDialogProps) {
   const errorLabel = error || errorMessage;
   let dialogTitle = title;
   if (!dialogTitle && item) {
-    const itemName = isKubeObjectIsh(item)
-      ? item.metadata?.name || t('New Object')
-      : t('New Object');
+    const itemName = (isKubeObjectIsh(item) && item.metadata?.name) || t('New Object');
     dialogTitle = isReadOnly()
       ? t('translation|View: {{ itemName }}', { itemName })
       : t('translation|Edit: {{ itemName }}', { itemName });

@@ -92,7 +92,15 @@
           >
             <div
               class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-            />
+            >
+              <div
+                class="MuiBox-root css-70qvj9"
+              >
+                <div
+                  class="MuiBox-root css-ldp2l3"
+                />
+              </div>
+            </div>
           </div>
           <div
             class="MuiBox-root css-1txv3mw"
